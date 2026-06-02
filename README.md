@@ -1,2 +1,2 @@
-Email: admin@abrasystem.com
-Senha: Abra@2024
+Email: admin@dogking.com
+Senha: DogKing@2024

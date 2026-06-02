@@ -99,7 +99,7 @@ export function Sidebar() {
           return (
             <div key={group.label}>
               {!sidebarCollapsed && (
-                <p className="px-4 mb-2 text-[10px] font-bold tracking-widest text-gold-600/40 uppercase">
+                <p className="px-4 mb-2 text-[10px] font-bold tracking-widest text-muted-foreground uppercase">
                   {group.label}
                 </p>
               )}
@@ -141,7 +141,7 @@ export function Sidebar() {
       {/* Versão no rodapé */}
       <div className="border-t border-sidebar-border p-3 text-center">
         {!sidebarCollapsed && (
-          <p className="text-[10px] text-gold-700/40">v1.0.0</p>
+          <p className="text-[10px] text-muted-foreground/50">v1.0.0</p>
         )}
       </div>
     </aside>
