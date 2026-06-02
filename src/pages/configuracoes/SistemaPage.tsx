@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import { useUIStore } from '@/store/ui.store';
 
 function Section({ icon, title, description, children }: {
   icon: React.ReactNode; title: string; description: string; children: React.ReactNode;
@@ -70,7 +71,7 @@ type Theme = 'dark' | 'light' | 'system';
 
 export function SistemaPage() {
   const [saved, setSaved] = useState(false);
-  const [theme, setTheme] = useState<Theme>('dark');
+  const { theme, setTheme } = useUIStore();
 
   // Notificações
   const [notifEntregas, setNotifEntregas]         = useState(true);
