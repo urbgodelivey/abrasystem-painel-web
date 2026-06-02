@@ -4,71 +4,70 @@
 
 @layer base {
   /* ═══════════════════════════════════════════
-     Paleta AbraSystem — Preto + Dourado
-     Baseada no logo oficial da marca
+     Paleta Dog King — Vermelho + Amarelo
      ═══════════════════════════════════════════ */
 
   :root {
-    --background: 40 15% 97%;
-    --foreground: 30 10% 10%;
-    --card: 40 15% 99%;
-    --card-foreground: 30 10% 10%;
-    --popover: 40 15% 99%;
-    --popover-foreground: 30 10% 10%;
-    --primary: 43 74% 49%;
+    --background: 0 0% 97%;
+    --foreground: 0 10% 10%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 10% 10%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 0 10% 10%;
+    --primary: 350 86% 42%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 40 12% 93%;
-    --secondary-foreground: 30 10% 20%;
-    --muted: 40 10% 93%;
-    --muted-foreground: 30 8% 46%;
-    --accent: 43 30% 92%;
-    --accent-foreground: 43 60% 30%;
+    --secondary: 350 20% 93%;
+    --secondary-foreground: 350 30% 20%;
+    --muted: 350 5% 93%;
+    --muted-foreground: 350 5% 46%;
+    --accent: 46 100% 48%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
     --warning-foreground: 30 10% 10%;
-    --border: 40 10% 88%;
-    --input: 40 10% 88%;
-    --ring: 43 74% 49%;
+    --border: 350 8% 85%;
+    --input: 350 8% 85%;
+    --ring: 350 86% 42%;
     --radius: 0.625rem;
-    --sidebar: 30 8% 12%;
-    --sidebar-foreground: 40 10% 88%;
-    --sidebar-accent: 43 25% 18%;
-    --sidebar-accent-foreground: 43 60% 70%;
-    --sidebar-border: 30 6% 18%;
+    --sidebar: 350 15% 10%;
+    --sidebar-foreground: 0 5% 90%;
+    --sidebar-accent: 350 40% 15%;
+    --sidebar-accent-foreground: 46 100% 60%;
+    --sidebar-border: 350 10% 16%;
   }
 
   .dark {
-    --background: 0 0% 3.5%;
-    --foreground: 40 10% 93%;
-    --card: 30 5% 7%;
-    --card-foreground: 40 10% 93%;
-    --popover: 30 5% 7%;
-    --popover-foreground: 40 10% 93%;
-    --primary: 43 74% 49%;
-    --primary-foreground: 0 0% 3.5%;
-    --secondary: 30 6% 14%;
-    --secondary-foreground: 40 10% 93%;
-    --muted: 30 5% 14%;
-    --muted-foreground: 40 8% 55%;
-    --accent: 43 25% 14%;
-    --accent-foreground: 43 55% 70%;
+    --background: 350 5% 4%;
+    --foreground: 0 5% 93%;
+    --card: 350 6% 7%;
+    --card-foreground: 0 5% 93%;
+    --popover: 350 6% 7%;
+    --popover-foreground: 0 5% 93%;
+    --primary: 350 86% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 350 8% 13%;
+    --secondary-foreground: 0 5% 93%;
+    --muted: 350 6% 13%;
+    --muted-foreground: 0 5% 55%;
+    --accent: 46 100% 48%;
+    --accent-foreground: 0 0% 5%;
     --destructive: 0 62% 50%;
-    --destructive-foreground: 40 10% 93%;
+    --destructive-foreground: 0 5% 93%;
     --success: 142 71% 45%;
-    --success-foreground: 40 10% 93%;
+    --success-foreground: 0 5% 93%;
     --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 3.5%;
-    --border: 30 6% 16%;
-    --input: 30 6% 16%;
-    --ring: 43 74% 49%;
-    --sidebar: 0 0% 4.5%;
-    --sidebar-foreground: 40 10% 85%;
-    --sidebar-accent: 43 20% 11%;
-    --sidebar-accent-foreground: 43 60% 68%;
-    --sidebar-border: 30 5% 11%;
+    --warning-foreground: 0 0% 5%;
+    --border: 350 8% 14%;
+    --input: 350 8% 14%;
+    --ring: 350 86% 42%;
+    --sidebar: 350 8% 5%;
+    --sidebar-foreground: 0 5% 85%;
+    --sidebar-accent: 350 35% 11%;
+    --sidebar-accent-foreground: 46 100% 65%;
+    --sidebar-border: 350 8% 10%;
   }
 }
 
@@ -113,14 +112,14 @@ input:-webkit-autofill:active {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(43 30% 30% / 0.4);
+  background: hsl(350 86% 42% / 0.4);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(43 40% 40% / 0.6);
+  background: hsl(350 86% 42% / 0.6);
 }
 
-/* ── Overrides MapLibre / mapcn ─── */
+/* ── Overrides MapLibre ─── */
 @layer base {
   .maplibregl-popup-content {
     @apply bg-transparent! shadow-none! p-0! rounded-none!;

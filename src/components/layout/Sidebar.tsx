@@ -43,20 +43,19 @@ export function Sidebar() {
           <div className="flex items-center gap-2.5">
             <img
               src="/logo.png"
-              alt="AbraSystem"
-              className="h-9 w-9 rounded-lg object-contain"
+              alt="Dog King"
+              className="h-9 w-9 rounded-full object-contain"
               onError={(e) => {
-                // Fallback se a imagem não existir
                 (e.target as HTMLImageElement).style.display = 'none';
               }}
             />
             <div className="flex flex-col">
-              <span className="text-base font-bold leading-tight">
-                <span className="text-white">ABRA</span>
-                <span className="text-gold-500">SYSTEM</span>
+              <span className="text-base font-black leading-tight tracking-wide">
+                <span className="text-brand-500">DOG</span>
+                <span className="text-gold-400"> KING</span>
               </span>
-              <span className="text-[8px] tracking-[0.15em] text-gold-600/60 uppercase">
-                Soluções Inteligentes
+              <span className="text-[8px] tracking-[0.15em] text-brand-500/60 uppercase">
+                O Melhor Delivery
               </span>
             </div>
           </div>
@@ -64,21 +63,21 @@ export function Sidebar() {
         {sidebarCollapsed && (
           <img
             src="/logo.png"
-            alt="A"
-            className="h-8 w-8 rounded-md object-contain mx-auto"
+            alt="DK"
+            className="h-8 w-8 rounded-full object-contain mx-auto"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
               const fallback = document.createElement('span');
-              fallback.className = 'text-gold-500 font-bold text-lg';
-              fallback.textContent = 'A';
+              fallback.className = 'text-brand-500 font-black text-lg';
+              fallback.textContent = 'DK';
               target.parentElement?.appendChild(fallback);
             }}
           />
         )}
         <button
           onClick={toggleSidebar}
-          className="p-1.5 rounded-md hover:bg-sidebar-accent transition-colors text-gold-600/50 hover:text-gold-500"
+          className="p-1.5 rounded-md hover:bg-sidebar-accent transition-colors text-brand-500/50 hover:text-brand-400"
           title={sidebarCollapsed ? 'Expandir menu' : 'Recolher menu'}
         >
           {sidebarCollapsed ? (
@@ -116,7 +115,7 @@ export function Sidebar() {
                       className={cn(
                         'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all duration-200 group',
                         isActive
-                          ? 'bg-gold-500/15 text-gold-400 font-medium border border-gold-500/20'
+                          ? 'bg-brand-500/15 text-brand-400 font-medium border border-brand-500/20'
                           : 'text-sidebar-foreground/60 hover:bg-sidebar-accent hover:text-gold-400/80'
                       )}
                       title={sidebarCollapsed ? item.label : undefined}
@@ -124,7 +123,7 @@ export function Sidebar() {
                       <Icon
                         className={cn(
                           'h-4 w-4 shrink-0 transition-colors',
-                          isActive ? 'text-gold-500' : 'text-sidebar-foreground/40 group-hover:text-gold-500/70'
+                          isActive ? 'text-brand-500' : 'text-sidebar-foreground/40 group-hover:text-gold-500/70'
                         )}
                       />
                       {!sidebarCollapsed && (

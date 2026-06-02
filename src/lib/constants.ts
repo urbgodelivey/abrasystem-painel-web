@@ -1,6 +1,6 @@
 // ── Versão do sistema ─────────────────────
 export const APP_VERSION = '1.0.0';
-export const APP_NAME = 'AbraSystem';
+export const APP_NAME = 'Dog King';
 
 // ── Grupos do Menu Lateral ────────────────
 export const SIDEBAR_GROUPS = [
