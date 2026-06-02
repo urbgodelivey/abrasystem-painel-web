@@ -173,7 +173,6 @@ export function MapaPage() {
             <Map
               center={MAP_CENTER}
               zoom={MAP_ZOOM}
-              theme="dark"
               className="h-full w-full"
             >
               <MapControls showZoom showCompass position="bottom-right" />

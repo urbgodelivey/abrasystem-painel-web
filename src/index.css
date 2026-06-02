@@ -104,6 +104,17 @@ input:-webkit-autofill:active {
   caret-color: hsl(var(--foreground));
 }
 
+/* ── Override autofill para inputs explicitamente brancos (como no card de login) ─── */
+input.bg-white:-webkit-autofill,
+input.bg-white:-webkit-autofill:hover,
+input.bg-white:-webkit-autofill:focus,
+input.bg-white:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #09090b !important;
+  caret-color: #09090b !important;
+}
+
 /* ── Scrollbar personalizada ─── */
 ::-webkit-scrollbar {
   width: 6px;

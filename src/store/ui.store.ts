@@ -39,7 +39,7 @@ export const useUIStore = create<UIState>()(
 
     }),
     {
-      name: 'abrasystem-ui',
+      name: 'abrasystem-ui-v2',
     }
   )
 );
