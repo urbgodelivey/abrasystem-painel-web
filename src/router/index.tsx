@@ -5,15 +5,10 @@ import { LoginPage } from '@/pages/login/LoginPage';
 import { DashboardPage } from '@/pages/dashboard/DashboardPage';
 import { EntregasPage } from '@/pages/entregas/EntregasPage';
 import { MapaPage } from '@/pages/mapa/MapaPage';
-import { ClientesPage } from '@/pages/clientes/ClientesPage';
+import { LojasPage } from '@/pages/lojas/LojasPage';
 import { EntregadoresPage } from '@/pages/entregadores/EntregadoresPage';
-import { FornecedoresPage } from '@/pages/fornecedores/FornecedoresPage';
 import { TabelasPrecoPage } from '@/pages/tabelas-preco/TabelasPrecoPage';
-import { ContasReceberPage } from '@/pages/financeiro/ContasReceberPage';
-import { ContasPagarPage } from '@/pages/financeiro/ContasPagarPage';
-import { CaixaPage } from '@/pages/financeiro/CaixaPage';
-import { BancosPage } from '@/pages/financeiro/BancosPage';
-import { FaturamentoPage } from '@/pages/financeiro/FaturamentoPage';
+import { MotoboysPagarPage } from '@/pages/financeiro/MotoboysPagarPage';
 import { DocumentosFiscaisPage } from '@/pages/fiscal/DocumentosFiscaisPage';
 import { NfsePage } from '@/pages/fiscal/NfsePage';
 import { ConfiguracoesFiscaisPage } from '@/pages/fiscal/ConfiguracoesFiscaisPage';
@@ -39,15 +34,10 @@ export function AppRouter() {
 
           <Route path="/entregas" element={<EntregasPage />} />
           <Route path="/mapa" element={<MapaPage />} />
-          <Route path="/clientes" element={<ClientesPage />} />
+          <Route path="/lojas" element={<LojasPage />} />
           <Route path="/entregadores" element={<EntregadoresPage />} />
-          <Route path="/fornecedores" element={<FornecedoresPage />} />
           <Route path="/tabelas-preco" element={<TabelasPrecoPage />} />
-          <Route path="/financeiro/receber" element={<ContasReceberPage />} />
-          <Route path="/financeiro/pagar" element={<ContasPagarPage />} />
-          <Route path="/financeiro/caixa" element={<CaixaPage />} />
-          <Route path="/financeiro/bancos" element={<BancosPage />} />
-          <Route path="/financeiro/faturamento" element={<FaturamentoPage />} />
+          <Route path="/financeiro/motoboys" element={<MotoboysPagarPage />} />
           <Route path="/fiscal/documentos" element={<DocumentosFiscaisPage />} />
           <Route path="/fiscal/nfse" element={<NfsePage />} />
           <Route path="/fiscal/configuracoes" element={<ConfiguracoesFiscaisPage />} />
