@@ -62,32 +62,32 @@ export function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-black relative overflow-hidden">
-      {/* Background decorativo dourado com imagem hero */}
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-brand-950 via-brand-800 to-brand-900 relative overflow-hidden">
+      {/* Background Dog King — vermelho + amarelo */}
       <div className="absolute inset-0">
         <img
           src="/login-hero.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
+          className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-gold-600 rounded-full filter blur-[180px] opacity-15" />
-        <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-gold-500 rounded-full filter blur-[200px] opacity-10" />
-        {/* Linhas douradas decorativas */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+        {/* Glow vermelho Dog King */}
+        <div className="absolute top-1/4 -left-40 w-[600px] h-[600px] bg-brand-500 rounded-full filter blur-[220px] opacity-20" />
+        {/* Glow amarelo Dog King */}
+        <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-gold-500 rounded-full filter blur-[180px] opacity-25" />
+        {/* Linhas de marca */}
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-500/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
       </div>
 
-      <Card className="w-full max-w-md mx-4 bg-black/60 backdrop-blur-2xl border-gold-500/20 shadow-2xl shadow-gold-500/5 animate-fade-in">
+      <Card className="w-full max-w-md mx-4 bg-white/95 backdrop-blur-2xl border-white/20 shadow-2xl shadow-black/40 animate-fade-in">
         <CardHeader className="text-center space-y-4 pb-2">
           {/* Logo */}
           <div className="flex flex-col items-center gap-4">
             <img
               src="/logo.png"
-              alt="AbraSystem"
-              className="h-24 w-auto object-contain drop-shadow-lg"
+              alt="Dog King"
+              className="h-28 w-auto object-contain drop-shadow-lg"
               onError={(e) => {
-                // Fallback se logo não existir
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
                 const fallback = target.nextElementSibling;
@@ -96,30 +96,30 @@ export function LoginPage() {
             />
             {/* Fallback do logo (escondido por padrão) */}
             <div className="hidden flex-col items-center gap-2">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center shadow-lg shadow-gold-500/30">
-                <span className="text-3xl font-black text-black">A</span>
+              <div className="h-16 w-16 rounded-full bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/30">
+                <span className="text-xl font-black text-white">DK</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold">
-                  <span className="text-white">ABRA</span>
-                  <span className="text-gold-500">SYSTEM</span>
+                <h1 className="text-2xl font-black tracking-wide">
+                  <span className="text-brand-500">DOG</span>
+                  <span className="text-gold-400"> KING</span>
                 </h1>
               </div>
             </div>
-            <p className="text-sm text-gold-500/60">
-              Soluções Inteligentes em Sistemas
+            <p className="text-sm font-semibold text-brand-600 tracking-wide uppercase">
+              🐶 O Melhor Delivery da Cidade
             </p>
           </div>
         </CardHeader>
 
         <CardContent className="space-y-6 pt-4">
-          {/* Separador dourado */}
-          <div className="h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+          {/* Separador vermelho */}
+          <div className="h-px bg-gradient-to-r from-transparent via-brand-500/20 to-transparent" />
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* E-mail */}
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-gold-400/80">E-mail</Label>
+              <Label htmlFor="email" className="text-zinc-700 font-medium">E-mail</Label>
               <Input
                 id="email"
                 type="email"
@@ -127,7 +127,7 @@ export function LoginPage() {
                 autoComplete="email"
                 disabled={isLoading}
                 {...register('email')}
-                className={`bg-white/5 border-gold-500/20 text-white placeholder:text-white/30 focus-visible:ring-gold-500/50 focus-visible:border-gold-500/40 ${errors.email ? 'border-destructive' : ''}`}
+                className={`bg-white border-zinc-200 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-brand-500/20 focus-visible:border-brand-500/40 ${errors.email ? 'border-destructive' : ''}`}
               />
               {errors.email && (
                 <p className="text-xs text-destructive">{errors.email.message}</p>
@@ -136,7 +136,7 @@ export function LoginPage() {
 
             {/* Senha */}
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-gold-400/80">Senha</Label>
+              <Label htmlFor="password" className="text-zinc-700 font-medium">Senha</Label>
               <div className="relative">
                 <Input
                   id="password"
@@ -145,12 +145,12 @@ export function LoginPage() {
                   autoComplete="current-password"
                   disabled={isLoading}
                   {...register('password')}
-                  className={`bg-white/5 border-gold-500/20 text-white placeholder:text-white/30 focus-visible:ring-gold-500/50 focus-visible:border-gold-500/40 pr-10 ${errors.password ? 'border-destructive' : ''}`}
+                  className={`bg-white border-zinc-200 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-brand-500/20 focus-visible:border-brand-500/40 pr-10 ${errors.password ? 'border-destructive' : ''}`}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gold-500/40 hover:text-gold-500/80 transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
                   tabIndex={-1}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -167,9 +167,9 @@ export function LoginPage() {
                 id="remember"
                 checked={watch('remember')}
                 onCheckedChange={(checked) => setValue('remember', Boolean(checked))}
-                className="border-gold-500/30 data-[state=checked]:bg-gold-500 data-[state=checked]:border-gold-500"
+                className="border-zinc-300 data-[state=checked]:bg-brand-500 data-[state=checked]:border-brand-500"
               />
-              <Label htmlFor="remember" className="text-sm font-normal cursor-pointer text-white/60">
+              <Label htmlFor="remember" className="text-sm font-normal cursor-pointer text-zinc-600">
                 Lembrar acesso
               </Label>
             </div>
@@ -177,7 +177,7 @@ export function LoginPage() {
             {/* Botão Login */}
             <Button
               type="submit"
-              className="w-full h-11 text-base font-semibold bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 hover:from-gold-500 hover:via-gold-400 hover:to-gold-300 text-black shadow-lg shadow-gold-500/25 transition-all duration-300"
+              className="w-full h-11 text-base font-bold bg-gradient-to-r from-brand-700 via-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-500 text-white shadow-lg shadow-brand-500/25 transition-all duration-300 tracking-wide"
               disabled={isLoading}
             >
               {isLoading ? (
@@ -194,7 +194,7 @@ export function LoginPage() {
 
         {/* Versão */}
         <div className="text-center pb-6">
-          <p className="text-[10px] text-gold-700/40">v1.0.0</p>
+          <p className="text-[10px] text-zinc-400">v1.0.0</p>
         </div>
       </Card>
     </div>

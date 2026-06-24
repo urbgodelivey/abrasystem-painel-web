@@ -1,6 +1,6 @@
 // ── Versão do sistema ─────────────────────
 export const APP_VERSION = '1.0.0';
-export const APP_NAME = 'AbraSystem';
+export const APP_NAME = 'Dog King';
 
 // ── Grupos do Menu Lateral ────────────────
 export const SIDEBAR_GROUPS = [
@@ -15,20 +15,15 @@ export const SIDEBAR_GROUPS = [
   {
     label: 'CADASTROS',
     items: [
-      { id: 'customers', label: 'Clientes', icon: 'Users', path: '/clientes', permission: 'customers.view' },
+      { id: 'stores', label: 'Lojas', icon: 'Building2', path: '/lojas', permission: 'customers.view' },
       { id: 'deliverers', label: 'Entregadores', icon: 'Bike', path: '/entregadores', permission: 'deliverers.view' },
-      { id: 'suppliers', label: 'Fornecedores', icon: 'Factory', path: '/fornecedores', permission: 'suppliers.view' },
       { id: 'pricing', label: 'Tabelas de Preço', icon: 'Calculator', path: '/tabelas-preco', permission: 'pricing.view' },
     ],
   },
   {
     label: 'FINANCEIRO',
     items: [
-      { id: 'receivables', label: 'Contas a Receber', icon: 'TrendingUp', path: '/financeiro/receber', permission: 'financial.receivables' },
-      { id: 'payables', label: 'Contas a Pagar', icon: 'TrendingDown', path: '/financeiro/pagar', permission: 'financial.payables' },
-      { id: 'cashier', label: 'Caixa', icon: 'Wallet', path: '/financeiro/caixa', permission: 'financial.cashier' },
-      { id: 'banks', label: 'Bancos', icon: 'Building2', path: '/financeiro/bancos', permission: 'financial.banks' },
-      { id: 'billing', label: 'Faturamento', icon: 'FileText', path: '/financeiro/faturamento', permission: 'financial.billing' },
+      { id: 'motoboys-pagar', label: 'Motoboys a Pagar', icon: 'Bike', path: '/financeiro/motoboys', permission: 'financial.payables' },
     ],
   },
   {
